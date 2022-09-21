@@ -17,20 +17,20 @@
         <div class="card-header">
           <h2>Generate a Password</h2>
           <div class="card-body">
-            <text area read only id="password" placeholder="Your Secure Password" aria-label="Generated Password"></text>
+          <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
           </div>
           <!--form added to allow user to set criteria-->
           <!--labels added to target numbers, length, special characters-->
           <!--Default "value" added so user knows min characters is 8-->
           <!--class was added to form to allow styling in CSS-->
-          <form class="form">
             <label for="characterAmountNumber">Number of Characters</label>
-
-            <div>
-            <input type="range" min="1" max="100" value="8" id="characterAmountRange"/>
-            <input type="number" min="8" max="128" Value="8" id="characterAmountNumber"/>
+            <form id="passwordGenForm" class="form">
+            <!--div class added-->
+            <div class="character-amount-container">
+            <input type="range" min="1" max="100" value="8" id="characterAmountRange">
+            <input type="number" min="8" max="128" Value="8" id="characterAmountNumber">
             </div>
-            
+
             <label for="Uppercase">Uppercase</label>
             <input type="checkbox" id="Uppercase">
 
@@ -49,6 +49,5 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
