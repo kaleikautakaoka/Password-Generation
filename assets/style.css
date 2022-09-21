@@ -135,3 +135,7 @@ button {
     font-size: 0.8rem;
   }
 }
+
+.container {
+  flex-wrap: wrap;
+}

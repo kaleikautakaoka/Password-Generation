@@ -19,10 +19,12 @@
           <div class="card-body">
             <text area read only id="password" placeholder="Your Secure Password" aria-label="Generated Password"></text>
           </div>
+          <!--form added to allow user to set criteria-->
+          <!--labels added to target numbers, length, special characters-->
           <form>
             <label for="">Number of Characters</label>
-            <input type="range" />
-            <input type="number" />
+            <input type="range" min="8" max="128" id="characterAmountRange"/>
+            <input type="number" min="8" max="128" id="characterAmountNumber"/>
           </form>
         </div>
         <div class="card-footer">
