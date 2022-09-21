@@ -11,10 +11,13 @@ body,
   margin: 0;
   padding: 0;
 }
-
+/*flex added to center items*/
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #dae0e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
@@ -31,7 +34,7 @@ header {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 16%, 96%);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -42,11 +45,17 @@ header {
   padding: 30px 40px;
 }
 
+.form {
+  display:grid;
+  grid grid-template-columns: auto auto;
+  column-gap: 3rem;
+}
+
 .card-header::after {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #eef3f8;
   height: 2px;
 }
 
@@ -62,7 +71,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #f1f3f5;
   height: 2px;
 }
 
@@ -78,7 +87,7 @@ header {
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
-  color: hsl(0, 0%, 100%);
+  color: hsl(0, 21%, 86%);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
@@ -90,7 +99,7 @@ header {
 
 button {
   cursor: default;
-  background: #c0c7cf;
+  background: #2f353b;
 }
 
 .float-right {
@@ -139,3 +148,4 @@ button {
 .container {
   flex-wrap: wrap;
 }
+

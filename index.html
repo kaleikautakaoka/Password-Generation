@@ -21,10 +21,27 @@
           </div>
           <!--form added to allow user to set criteria-->
           <!--labels added to target numbers, length, special characters-->
-          <form>
-            <label for="">Number of Characters</label>
-            <input type="range" min="8" max="128" id="characterAmountRange"/>
-            <input type="number" min="8" max="128" id="characterAmountNumber"/>
+          <!--Default "value" added so user knows min characters is 8-->
+          <!--class was added to form to allow styling in CSS-->
+          <form class="form">
+            <label for="characterAmountNumber">Number of Characters</label>
+
+            <div>
+            <input type="range" min="1" max="100" value="8" id="characterAmountRange"/>
+            <input type="number" min="8" max="128" Value="8" id="characterAmountNumber"/>
+            </div>
+            
+            <label for="Uppercase">Uppercase</label>
+            <input type="checkbox" id="Uppercase">
+
+            <label for="Lowercase">Lowercase</label>
+            <input type="checkbox" id="Lowercase">
+
+            <label for="Numbers">Numbers</label>
+            <input type="checkbox" id="Numbers">
+
+            <label for="SpecialCharacters">Special Characters</label>
+            <input type="checkbox" id="SpecialCharacters">
           </form>
         </div>
         <div class="card-footer">
