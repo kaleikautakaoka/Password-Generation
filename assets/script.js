@@ -15,15 +15,43 @@ var numericChar = ["0", "1", "2", "3","4", "5", "6", "7", "8", "9"];
 // Special Characters
 var specialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
 
-var generateBtn = document.querySelector(“#generate”);
+var generateBtn = document.querySelector("#passowrd");
 
 // Write password to the #password input
-function writePassword() {
+function writePassword() { var UserInput = getInput()
   var password = generatePassword();
-  var passwordText = document.querySelector(“#password”);
+  var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 
+function generatePassword(Uppercase, Lowercase, Numbers, SpecialCharacters) 
+{
+  let charCodes = LOWERCASE_CHAR_CODES
+  if (Uppercase) charCodes = charCodes.concat
+  (UPPERCASE_CHAR_CODES)
+  if (SpecialCharacters) charCodes = charCodes.concat
+  (SPECIALCHARACTERS_CHAR_CODES)
+  if (Numbers) charCodes = charCodes.concat
+  (NUMBER_CHAR_CODES)
+  
+  const passwordCharacters = []
+  for (let i = 0; i < characterAmount; i++) {
+    const characterCode = charCodes[Math.floor(Math.random() *
+      characterAmount)]
+  passwordCharacters.push(String.fromCharCode(characterCode))
+  }
+   return passwordCharacters.join()
+}
+
+function getInput() {
+  var characterAmount = parseInt(prompt("Select Amount of Characters(between 8-128)"))
+  if (characterAmount === NaN){
+    alert("please use a valid input")
+    getInput()
+  }
+
+}
+
 // Add event listener to generate button
-generateBtn.addEventListener(“click”, writePassword);
+generateBtn.addEventListener("click", writePassword);
 
