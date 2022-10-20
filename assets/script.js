@@ -64,13 +64,14 @@ if (upperCase === true) {
   combineArray.push(upperCase)
 }
 
-
-
+//if characters have not been selected this prompt/windowalert will appear
 if (combinedVar.length === 0) {
-  combineArray.push(lowerCase)
+  window.alert("Please make a character selection")
+  return
 }
 
 var generatedPwd = ""
+
 
 for (var i = 0; i < pwdLength; i++) {
   var rdmList = getRandomItem(combinedVar)
