@@ -43,66 +43,31 @@ function generatePwd() {
    var specialChar = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "`", "-", "="]
    var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
    var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+   //array to combine all the variables 
+   var combineArray = []
 
-   
-
-  var userSelection = window.prompt(message)
-  var isValid
-}
-
-var inputObject = {
-  canceled: userInput === null
-}
-
-if (inputType === "numbers") {
-  userInput
-}
-while (true) {
-  var userInput = window.prompt("Password length?")
-
-if (userInput === null) {
-  return
-}
-//prompt the user to choose the length of the password
-function promptUserForInputType(inputType, message, isValidCondition) {
-  var pwdLength = parseInt(userInput)
-
-  if (isNaN(pwdLength)) {
-    window.alert ("invalid")
-    return
-  }
-  else if (pwdLength < 8 || pwdLength > 110) {
-    window.alert("Must be between 8 - 110 characters")
-  } else {
-    break
-  }
-}
-}
-
-var combinedVar = []
-
-for (var i = 0; i < lowerChars.length; i++) {
-  upperChars[i] = lowerChars[i].toUpperCase()
-}
+   //the next four "if" conditions added so that any given array option can be added based on user selection
 
 if (wantNumbers === true) {
-  combinedVar.push(numbers)
+  combineArray.push(wantNumbers)
 }
 
-if (specialCharacters === true) {
-  combinedVar.push(symbols)
+if (specialChar === true) {
+  combineArray.push(specialChar)
 }
 
-if (lowerChars === true) {
-  combinedVar.push(lowercase)
+if (lowerCase === true) {
+  combineArray.push(lowerCase)
 }
 
-if (upperChars === true) {
-  combinedVar.push(uppercase)
+if (upperCase === true) {
+  combineArray.push(upperCase)
 }
+
+
 
 if (combinedVar.length === 0) {
-  combinedVar.push(lowercase)
+  combineArray.push(lowerCase)
 }
 
 var generatedPwd = ""
