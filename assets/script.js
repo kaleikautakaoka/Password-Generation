@@ -21,8 +21,15 @@ function generatePwd() {
    //prompts user to enter how long they want their password to be
    var userInput = window.prompt("Enter password length (Between 8 - 110 characters)")
    var passwordLength = parseInt(userInput)
+   //if the password length result isn't an interger then return this string below
    if (isNaN(passwordLength)) {
     window.alert("Please enter a number")
+    return
+   }
+
+   //if answer to passwordLength is not with 8 and 110 characters return string below
+   if (passwordLength < 8 || passwordLength > 110) {
+    window.alert("Password must be between 8 and 110 characters")
     return
    }
    
