@@ -1,47 +1,55 @@
 # Password-Generation
+## Table of Contents
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+- [Description](#Description)
+- [Project URL](#Project-URL)
+- [Deployment](#Deployment)
+- [Demo/Screenshots](#Demo/Screenshots)
+- [Technologies](#Technologies)
+- [License](#License)
+- [Resources](#Resources)
+- [Contact](#Contact)
+- [Author](#Author)
 
-This Challenge is graded based on the following criteria: 
+## Project URL
 
-### Technical Acceptance Criteria: 40%
+<https://kaleikautakaoka.github.io/Password-Generation/>
 
-* Satisfies all of the preceding acceptance criteria.
+## Delpoyment
 
-### Deployment: 32%
+- [https://kaleikautakaoka.github.io/Password-Generation/](https://kaleikautakaoka.github.io/Password-Generation/)
 
-* Application deployed at live URL.
+## Demo/Screenshots
 
-* Application loads with no errors.
+  <table>
+    <tr>
+      <td>Password Generator Page Example</td>
+    </tr>
+    <tr>
+      <td><img src="./assets/passwordgen.png" height=600 alt="screenshot of password generator webpage"></td>
+    </tr>
+  </table>
 
-* Application GitHub URL submitted.
+## Technologies
 
-* GitHub repository that contains application code.
+```
+HTML, CSS, Javascript
+```
 
-### Application Quality: 15%
+## License
 
-* Application user experience is intuitive and easy to navigate.
+This project is [mit](https://choosealicense.com/licenses/mit/) licensed.
 
-* Application user interface style is clean and polished.
+## Resources
 
-* Application resembles the mock-up functionality provided in the Challenge instructions.
+- [pixabay](https://pixabay.com/)
+- [w3schools](https://www.w3schools.com/)
 
-### Repository Quality: 13%
+## Contact
 
-* Repository has a unique name.
+Email: stakaoka@iml.org
 
-* Repository follows best practices for file structure and naming conventions.
+## Author
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
+Author(s): Sachi Kaleikau-Takaoka
+GitHub: <https://github.com/kaleikautakaoka>
