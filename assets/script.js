@@ -16,19 +16,16 @@ function getRandomItem(list) {
   return list[randomInt(list.length)]
 }
 
-//generates random set of characters meeting criteria set by the user
-function generatePassword() {
-
-}
-//prompt the user to choose the length of the password
-function promptUserForInputType(inputType, message, isValidCondition) {
-
-
-
+//generates random set of characters meeting certian length and type of character settings set by user
 function generatePwd() {
    //prompts user to enter how long they want their password to be
    var userInput = window.prompt("Enter password length (Between 8 - 110 characters)")
    var passwordLength = parseInt(userInput)
+   if (isNaN(passwordLength)) {
+    window.alert("Please enter a number")
+    return
+   }
+   
   var userSelection = window.prompt(message)
   var isValid
 }
@@ -46,7 +43,8 @@ while (true) {
 if (userInput === null) {
   return
 }
-
+//prompt the user to choose the length of the password
+function promptUserForInputType(inputType, message, isValidCondition) {
   var pwdLength = parseInt(userInput)
 
   if (isNaN(pwdLength)) {
