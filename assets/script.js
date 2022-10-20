@@ -27,12 +27,25 @@ function generatePwd() {
     return
    }
 
-   //if answer to passwordLength is not with 8 and 110 characters return string below
+   //if answer to passwordLength is not with 8 and 110 characters return string below to alert user to add more variables
    if (passwordLength < 8 || passwordLength > 110) {
     window.alert("Password must be between 8 and 110 characters")
     return
    }
+  //Prompts for user to select options they want in their password
+   var wantNumbers = windows.confirm("Include Numbers?")
+   var specialChar = windows.confirm("Include Special Characters?")
+   var lowerCase = windows.confirm("Include Lower Case Letters?")
+   var upperCase = windows.confirm("Include Upper Case Letters?")
+
+   //arrays for character types
+   var wantNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+   var specialChar = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "`", "-", "="]
+   var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+   var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
    
+
   var userSelection = window.prompt(message)
   var isValid
 }
@@ -65,16 +78,6 @@ function promptUserForInputType(inputType, message, isValidCondition) {
   }
 }
 }
-
-var wantNumbers = window.confirm("Include Numbers?")
-var specialChars = windows.confirm("Include Special Characters?")
-var lowerChars = windows.confirm("Include Lower Case Letters?")
-var UpperChars = windows.confirm("Include Upper Case Letters?")
-
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-var symbols = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "`", "-", "="]
-var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 var combinedVar = []
 
