@@ -1,8 +1,42 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword() {
+//Random number between min and max (if max is unidentified then give the value between min and 0)
+function randomInt(min, max) {
+  if (!max) {
+    max = min
+    min = 0 
+  }
+  var rdm = Math.random()
+  return Math.floor(min*(1-rdm) + rdm*max)
+}
+
+function getRandomItem(list) {
+  return list[randomInt(list.length)]
+}
+
+function promptUserForInputType(inputType, message, isValidCondition) {
+  var userSelection = window.prompt(message)
+  var isValid
+}
+
+var inputObject = {
+  canceled: userInput === null
+}
+
+if (inputType === "numbers") {
+  userInput
+}
+
+
+function generatePwd() {
+
+while (true) {
   var userInput = window.prompt("Password length?")
+
+if (userInput === null) {
+  return
+}
 
   var pwdLength = parseInt(userInput)
 
@@ -10,10 +44,12 @@ function generatePassword() {
     window.alert ("invalid")
     return
   }
-  if (pwdLength < 8 || pwdLength > 110) {
+  else if (pwdLength < 8 || pwdLength > 110) {
     window.alert("Must be between 8 - 110 characters")
-    return
+  } else {
+    break
   }
+}
 }
 
 var wantNumbers = window.confirm("Include Numbers?")
@@ -48,13 +84,27 @@ if (upperChars === true) {
   combinedVar.push(uppercase)
 }
 
+if (combinedVar.length === 0) {
+  combinedVar.push(lowercase)
+}
+
+var generatedPwd = ""
+
+for (var i = 0; i < pwdLength; i++) {
+  var rdmList = getRandomItem(combinedVar)
+  var rdmChar = getRandomItem(rdmList)
+  generatedPwd += rdmChar
+}
+return generatedPwd
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+  if (password) {
   passwordText.value = password;
-
+  }
 }
 
 
