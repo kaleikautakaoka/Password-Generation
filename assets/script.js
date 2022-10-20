@@ -13,22 +13,22 @@ function randomInt(min, max) {
 
 //return random interger from a list
 function getRandomItem(list) {
-  return list[randomInt(list.length)]
+return list[randomInt(list.length)]
 }
 
 //generates random set of characters meeting certian length and type of character settings set by user
 function generatePwd() {
    //prompts user to enter how long they want their password to be
    var userInput = window.prompt("Enter password length (Between 8 - 110 characters)")
-   var passwordLength = parseInt(userInput)
+   var pwdLength = parseInt(userInput)
    //if the password length result isn't an interger then return this string below
-   if (isNaN(passwordLength)) {
+   if (isNaN(pwdLength)) {
     window.alert("Please enter a number")
     return
    }
 
-   //if answer to passwordLength is not with 8 and 110 characters return string below to alert user to add more variables
-   if (passwordLength < 8 || passwordLength > 110) {
+   //if answer to pwdLength is not with 8 and 110 characters return string below to alert user to add more variables
+   if (pwdLength < 8 || pwdLength > 110) {
     window.alert("Password must be between 8 and 110 characters")
     return
    }
@@ -44,24 +44,24 @@ function generatePwd() {
    var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
    var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
    //array to combine all the variables 
-   var combineArray = []
+   var concatvar = []
 
    //the next four "if" conditions added so that any given array option can be added based on user selection
 
 if (wantNumbers === true) {
-  combineArray.push(wantNumbers)
+  concatvar.push(wantNumbers)
 }
 
 if (specialChar === true) {
-  combineArray.push(specialChar)
+  concatvar.push(specialChar)
 }
 
 if (lowerCase === true) {
-  combineArray.push(lowerCase)
+  concatvar.push(lowerCase)
 }
 
 if (upperCase === true) {
-  combineArray.push(upperCase)
+  concatvar.push(upperCase)
 }
 
 //if characters have not been selected this prompt/windowalert will appear
@@ -72,22 +72,20 @@ if (combinedVar.length === 0) {
 
 var generatedPwd = ""
 
-
+//random generation of variables
 for (var i = 0; i < pwdLength; i++) {
-  var rdmList = getRandomItem(combinedVar)
+  var rdmList = getRandomItem(concatvar)
   var rdmChar = getRandomItem(rdmList)
   generatedPwd += rdmChar
 }
 return generatedPwd
 
-// Write password to the #password input
+// Display password to input
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePwd(8, 110);
   var passwordText = document.querySelector("#password");
 
-  if (password) {
-  passwordText.value = password;
-  }
+  passwordText.value = pwd;
 }
 
 
