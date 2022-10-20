@@ -38,16 +38,16 @@ HTML, CSS, Javascript
 
 ## License
 
-This project is [mit](https://choosealicense.com/licenses/mit/) licensed.
+This project is not licensed
 
 ## Resources
 
-- [pixabay](https://pixabay.com/)
+- [youtube](https://youtube.com/)
 - [w3schools](https://www.w3schools.com/)
 
 ## Contact
 
-Email: stakaoka@iml.org
+Email: NA
 
 ## Author
 
