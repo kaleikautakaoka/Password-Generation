@@ -11,11 +11,24 @@ function randomInt(min, max) {
   return Math.floor(min*(1-rdm) + rdm*max)
 }
 
+//return random interger from a list
 function getRandomItem(list) {
   return list[randomInt(list.length)]
 }
 
+//generates random set of characters meeting criteria set by the user
+function generatePassword() {
+
+}
+//prompt the user to choose the length of the password
 function promptUserForInputType(inputType, message, isValidCondition) {
+
+
+
+function generatePwd() {
+   //prompts user to enter how long they want their password to be
+   var userInput = window.prompt("Enter password length (Between 8 - 110 characters)")
+   var passwordLength = parseInt(userInput)
   var userSelection = window.prompt(message)
   var isValid
 }
@@ -27,10 +40,6 @@ var inputObject = {
 if (inputType === "numbers") {
   userInput
 }
-
-
-function generatePwd() {
-
 while (true) {
   var userInput = window.prompt("Password length?")
 
