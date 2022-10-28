@@ -19,53 +19,53 @@ return list[randomInt(list.length)]
 //generates random set of characters meeting certian length and type of character settings set by user
 function generatePwd() {
    //prompts user to enter how long they want their password to be
-   var userInput = window.prompt("Enter password length (Between 8 - 110 characters)")
-   var pwdLength = parseInt(userInput)
+   var personInput = window.prompt("Enter password length (Between 8 - 110 characters)")
+   var lengthOfPassw = parseInt(personInput)
    //if the password length result isn't an interger then return this string below
-   if (isNaN(pwdLength)) {
+   if (isNaN(lengthOfPassw)) {
     window.alert("Please enter a number")
     return
    }
 
-   //if answer to pwdLength is not with 8 and 110 characters return string below to alert user to add more variables
-   if (pwdLength < 8 || pwdLength > 110) {
+   //if answer to lengthOfPassw is not with 8 and 110 characters return string below to alert user to add more variables
+   if (lengthOfPassw < 11 || lengthOfPassw > 110) {
     window.alert("Password must be between 8 and 110 characters")
     return
    }
   //Prompts for user to select options they want in their password
-   var wantNumbers = window.confirm("Include Numbers?")
-   var specialChar = window.confirm("Include Special Characters?")
-   var lowerCase = window.confirm("Include Lower Case Letters?")
-   var upperCase = window.confirm("Include Upper Case Letters?")
+   var numberOptions = window.confirm("Include Numbers?")
+   var specialsOptions = window.confirm("Include Special Characters?")
+   var smallLetterOptions = window.confirm("Include Lower Case Letters?")
+   var largeLetterOptions = window.confirm("Include Upper Case Letters?")
 
    //arrays for character types
-   var numberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-   var symbolArray = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "`", "-", "="]
-   var lowerArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-   var upperArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+   var arrayWithNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+   var arrayWithSymbols = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "`", "-", "="]
+   var arrayWithLowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+   var arrayWithUpperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
    //array to combine all the variables 
-   var combinedVar = []
+   var variablesCombined = []
 
    //the next four "if" conditions added so that any given array option can be added based on user selection
 
-if (wantNumbers === true) {
-  combinedVar.push(numberArray)
+if (numberOptions === true) {
+  variablesCombined.push(arrayWithNumbers)
 }
 
-if (specialChar === true) {
-  combinedVar.push(symbolArray)
+if (specialsOptions === true) {
+  variablesCombined.push(arrayWithSymbols)
 }
 
-if (lowerCase === true) {
-  combinedVar.push(lowerArray)
+if (smallLetterOptions === true) {
+  variablesCombined.push(arrayWithLowerCase)
 }
 
-if (upperCase === true) {
-  combinedVar.push(upperArray)
+if (largeLetterOptions === true) {
+  variablesCombined.push(arrayWithUpperCase)
 }
 
 //if characters have not been selected this prompt/windowalert will appear
-if (combinedVar.length === 0) {
+if (variablesCombined.length === 0) {
   window.alert("Please make a character selection")
   return
 }
@@ -73,17 +73,17 @@ if (combinedVar.length === 0) {
 var generatedPwd = ""
 
 //random generation of variables
-for (var i = 0; i < pwdLength; i++) {
-  var rdmList = getRandomItem(combinedVar);
-  var rdmChar = getRandomItem(rdmList);
-  generatedPwd += rdmChar
+for (var i = 0; i < lengthOfPassw; i++) {
+  var completelyRdmList = getRandomItem(variablesCombined);
+  var completelyRdmSpecChar = getRandomItem(completelyRdmList);
+  generatedPwd += completelyRdmSpecChar
 }
 return generatedPwd
 }
 
 // Display password to input
 function writePassword() {
-  var pwd = generatePwd(8, 110);
+  var pwd = generatePwd(11, 110);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = pwd;
